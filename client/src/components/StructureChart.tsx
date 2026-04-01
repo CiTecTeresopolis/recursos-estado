@@ -19,7 +19,7 @@ interface StructureChartProps {
   data: StructureData[];
 }
 
-const COLORS = ["#3b82f6", "#60a5fa", "#93c5fd", "#bfdbfe", "#dbeafe"];
+const COLORS = ["#8ecae6", "#219ebc", "#023047", "#ffb703", "#fb8500"];
 
 const CustomTooltip = ({ active, payload }: any) => {
   if (active && payload && payload.length) {

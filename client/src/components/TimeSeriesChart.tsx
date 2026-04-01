@@ -6,7 +6,7 @@ import {
   CartesianGrid,
   Tooltip,
   ResponsiveContainer,
-} from 'recharts';
+} from "recharts";
 
 interface TimeSeriesData {
   Mes: string;
@@ -18,18 +18,18 @@ interface TimeSeriesChartProps {
 }
 
 const MONTH_NAMES: Record<string, string> = {
-  '01': 'Jan',
-  '02': 'Fev',
-  '03': 'Mar',
-  '04': 'Abr',
-  '05': 'Mai',
-  '06': 'Jun',
-  '07': 'Jul',
-  '08': 'Ago',
-  '09': 'Set',
-  '10': 'Out',
-  '11': 'Nov',
-  '12': 'Dez',
+  "01": "Jan",
+  "02": "Fev",
+  "03": "Mar",
+  "04": "Abr",
+  "05": "Mai",
+  "06": "Jun",
+  "07": "Jul",
+  "08": "Ago",
+  "09": "Set",
+  "10": "Out",
+  "11": "Nov",
+  "12": "Dez",
 };
 
 const CustomTooltip = ({ active, payload }: any) => {
@@ -47,13 +47,16 @@ const CustomTooltip = ({ active, payload }: any) => {
 };
 
 export default function TimeSeriesChart({ data }: TimeSeriesChartProps) {
-  const formattedData = data.map((item) => ({
+  const formattedData = data.map(item => ({
     ...item,
     MesLabel: MONTH_NAMES[item.Mes] || item.Mes,
   }));
 
   return (
-    <div className="relative group overflow-hidden bg-white text-gray-900 rounded-xl p-6 border border-gray-100 shadow-sm hover:shadow-md transition-all duration-500 animate-fade-in" style={{ animationDelay: '100ms' }}>
+    <div
+      className="relative group overflow-hidden bg-white text-gray-900 rounded-xl p-6 border border-gray-100 shadow-sm hover:shadow-md transition-all duration-500 animate-fade-in"
+      style={{ animationDelay: "100ms" }}
+    >
       <div className="relative z-10">
         <h3 className="text-lg font-semibold font-poppins mb-1 text-gray-900">
           Evolução Mensal
@@ -69,8 +72,8 @@ export default function TimeSeriesChart({ data }: TimeSeriesChartProps) {
           >
             <defs>
               <linearGradient id="colorValor" x1="0" y1="0" x2="0" y2="1">
-                <stop offset="5%" stopColor="#3b82f6" stopOpacity={0.15} />
-                <stop offset="95%" stopColor="#3b82f6" stopOpacity={0} />
+                <stop offset="5%" stopColor="#219ebc" stopOpacity={0.15} />
+                <stop offset="95%" stopColor="#219ebc" stopOpacity={0} />
               </linearGradient>
             </defs>
             <CartesianGrid
@@ -81,21 +84,21 @@ export default function TimeSeriesChart({ data }: TimeSeriesChartProps) {
             />
             <XAxis
               dataKey="MesLabel"
-              tick={{ fill: '#6b7280', fontSize: 12, fontWeight: 500 }}
+              tick={{ fill: "#6b7280", fontSize: 12, fontWeight: 500 }}
               axisLine={false}
               tickLine={false}
             />
             <YAxis
-              tick={{ fill: '#6b7280', fontSize: 12 }}
+              tick={{ fill: "#6b7280", fontSize: 12 }}
               axisLine={false}
               tickLine={false}
-              tickFormatter={(value) => `${(value / 1_000_000).toFixed(0)}M`}
+              tickFormatter={value => `${(value / 1_000_000).toFixed(0)}M`}
             />
             <Tooltip content={<CustomTooltip />} cursor={false} />
             <Area
               type="monotone"
               dataKey="Valor"
-              stroke="#3b82f6"
+              stroke="#219ebc"
               strokeWidth={2}
               fillOpacity={1}
               fill="url(#colorValor)"

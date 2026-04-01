@@ -19,16 +19,16 @@ interface TopResourcesChartProps {
 }
 
 const COLORS = [
-  "#3b82f6",
-  "#3b82f6",
-  "#3b82f6",
-  "#3b82f6",
-  "#3b82f6",
-  "#60a5fa",
-  "#60a5fa",
-  "#60a5fa",
-  "#93c5fd",
-  "#93c5fd",
+  "#8ecae6",
+  "#219ebc",
+  "#023047",
+  "#ffb703",
+  "#fb8500",
+  "#8ecae6",
+  "#219ebc",
+  "#023047",
+  "#ffb703",
+  "#fb8500",
 ];
 
 const CustomTooltip = ({ active, payload }: any) => {

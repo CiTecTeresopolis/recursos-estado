@@ -38,7 +38,7 @@ const CustomTooltip = ({ active, payload }: any) => {
     return (
       <div className="bg-white rounded-lg p-3 shadow-lg border border-gray-100">
         <p className="text-sm font-semibold text-gray-900">
-          R$ {(value / 1_000_000).toFixed(1)}M
+          R$ {value.toLocaleString("pt-BR")}
         </p>
       </div>
     );

@@ -75,7 +75,7 @@ export default function TopResourcesChart({ data }: TopResourcesChartProps) {
               tickFormatter={value => `${(value / 1_000_000).toFixed(0)}M`}
             />
             <YAxis
-              dataKey="Recurso"
+              dataKey="Estrutura"
               type="category"
               width={170}
               tick={{ fill: "#6b7280", fontSize: 11, fontWeight: 500 }}

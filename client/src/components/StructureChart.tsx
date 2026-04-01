@@ -43,9 +43,11 @@ export default function StructureChart({ data }: StructureChartProps) {
     >
       <div className="relative z-10">
         <h3 className="text-lg font-semibold font-poppins mb-1 text-gray-900">
-          Recursos por Estrutura
+          Recursos por Modalidade
         </h3>
-        <p className="text-xs text-gray-500 mb-6">Distribuição por setor</p>
+        <p className="text-xs text-gray-500 mb-6">
+          Distribuição por Modalidade
+        </p>
 
         <ResponsiveContainer width="100%" height={280}>
           <BarChart

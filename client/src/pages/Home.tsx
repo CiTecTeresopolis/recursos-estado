@@ -119,8 +119,12 @@ export default function Home() {
         <div className="relative container py-10">
           <div className="flex items-center justify-between mb-3 animate-slide-in-left">
             <div className="flex items-center gap-4">
-              <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-primary to-primary/70 flex items-center justify-center shadow-lg">
-                <DollarSign className="w-7 h-7 text-primary-foreground" />
+              <div className="w-25 h-25 rounded-xl bg-gradient-to-br from-primary to-primary/70 flex items-center justify-center shadow-lg">
+                <img
+                  src="logo.png"
+                  alt="Logo"
+                  className="w-15 h-15 object-contain"
+                />
               </div>
               <div>
                 <h1 className="text-4xl font-bold font-poppins text-foreground">
@@ -235,13 +239,17 @@ export default function Home() {
         <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-primary/50 via-primary to-primary/50 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
         <div className="relative z-10">
-          <p className="text-sm text-muted-foreground mb-2">
+          <img src="cie.png" alt="Logo" className="w-55 h-25 object-contain" />
+          <p
+            className="text-sm text-muted-foreground mb-2"
+            style={{ marginTop: -60 }}
+          >
             Dados processados de recursos liberados em {selectedYear} para
             análise e visualização.
           </p>
           <p className="text-xs text-muted-foreground/70">
-            Secretaria Municipal de Ciência e Tecnologia - Mantido pelo
-            Departamento de Governança de Dados
+            Secretaria Municipal de Ciência e Tecnologia - Departamento de
+            Governança de Dados
           </p>
         </div>
       </section>

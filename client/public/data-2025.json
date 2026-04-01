@@ -140,15 +140,11 @@
       {"Mes": "12", "Valor": 11411937.79}
     ],
     "top_recursos": [
-      {"Recurso": "IPVA (em Fevereiro)", "Valor": 8712996.69},
-      {"Recurso": "ICMS (em Dezembro)", "Valor": 6611266.88},
-      {"Recurso": "ICMS (em Julho)", "Valor": 6279731.32},
-      {"Recurso": "IPVA (em Janeiro)", "Valor": 6234212.89},
-      {"Recurso": "ICMS (em Abril)", "Valor": 5958594.07},
-      {"Recurso": "ICMS (em Setembro)", "Valor": 5895435.67},
-      {"Recurso": "ICMS (em Fevereiro)", "Valor": 5428757.68},
-      {"Recurso": "ICMS (em Outubro)", "Valor": 5281136.50},
-      {"Recurso": "ICMS (em Maio)", "Valor": 5127875.39}
+      {"Estrutura": "ICMS", "Valor": 65169575.84},
+      {"Estrutura": "IPVA", "Valor": 31304116.32},
+      {"Estrutura": "ICMS - FUNDEB", "Valor": 16429187.27},
+      {"Estrutura": "ROYALTIES", "Valor": 11093021.89},
+      {"Estrutura": "IPVA - FUNDEB", "Valor": 7751397.36}
     ],
     "total_geral": 135629582.54
   }

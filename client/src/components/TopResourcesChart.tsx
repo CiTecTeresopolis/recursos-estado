@@ -53,10 +53,10 @@ export default function TopResourcesChart({ data }: TopResourcesChartProps) {
     >
       <div className="relative z-10">
         <h3 className="text-lg font-semibold font-poppins mb-1 text-gray-900">
-          Top 10 Recursos Transferidos
+          Top 5 Recursos Transferidos
         </h3>
         <p className="text-xs text-gray-500 mb-6">
-          Principais recursos transferidos para o estado
+          Principais recursos transferidos pelo Estado
         </p>
 
         <ResponsiveContainer width="100%" height={350}>

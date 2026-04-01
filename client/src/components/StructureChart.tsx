@@ -36,6 +36,8 @@ const CustomTooltip = ({ active, payload }: any) => {
 };
 
 export default function StructureChart({ data }: StructureChartProps) {
+  const sortedData = [...data].sort((a, b) => b.Valor - a.Valor);
+
   return (
     <div
       className="relative group overflow-hidden bg-white text-gray-900 rounded-xl p-6 border border-gray-100 shadow-sm hover:shadow-md transition-all duration-500 animate-fade-in"
@@ -51,7 +53,7 @@ export default function StructureChart({ data }: StructureChartProps) {
 
         <ResponsiveContainer width="100%" height={280}>
           <BarChart
-            data={data}
+            data={sortedData}
             margin={{ top: 10, right: 20, left: 0, bottom: 50 }}
           >
             <CartesianGrid
@@ -77,7 +79,7 @@ export default function StructureChart({ data }: StructureChartProps) {
             />
             <Tooltip content={<CustomTooltip />} cursor={false} />
             <Bar dataKey="Valor" radius={[8, 8, 0, 0]} isAnimationActive={true}>
-              {data.map((entry, index) => (
+              {sortedData.map((entry, index) => (
                 <Cell
                   key={`cell-${index}`}
                   fill={COLORS[index % COLORS.length]}

@@ -85,7 +85,7 @@ export default function Home() {
   }
 
   const totalGeral = data.metrics.total_geral;
-  const todasEstruturas = data.raw_data;
+  const todasEstruturas = data.metrics.total_por_estrutura;
   const totalEstruturas = data.metrics.total_por_estrutura;
   const maiorEstrutura = totalEstruturas[0];
   const percentualMaior = ((maiorEstrutura.Valor / totalGeral) * 100).toFixed(

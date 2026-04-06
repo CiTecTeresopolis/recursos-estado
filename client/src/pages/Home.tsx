@@ -201,7 +201,7 @@ export default function Home() {
             />
 
             <MetricCard
-              title="Número de Recursos"
+              title="Modalidades de Recursos"
               value={todasEstruturas.length}
               subtitle=""
               icon={<TrendingUp className="w-6 h-6" />}
